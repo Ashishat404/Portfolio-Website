@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'poppins', sans-serif;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 82px;
+            background-color: rgb(0, 0, 65);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style-type: none;
+            margin: 0 25px;
+
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(245, 143, 26);
+            font-size: 1.05rem;
+        }
+
+        /*ideally utility classes alag side specific classes alag aur global classes body wagera ko jo change krenge vo alag -->3 seperate css stylesheets */
+        main hr {
+            border: 0;
+            background-color: #0e3a3a;
+            height: 1px;
+            margin: 40px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 85px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            /* background-color: red; */
+            font-size: 2.2rem;
+            /* margin: 60px 0; */
+
+        }
+
+        .leftSection .buttons {
+            padding: 20px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background-color: #484ef7;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .rightSection img {
+            /* background-color: red; */
+            width: 80%;
+            /* margin: 50px 0; */
+        }
+
+        .purple {
+            color: rgb(175, 97, 248);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(186, 120, 248);
+            ;
+        }
+
+        /* we can also try having our image in background by lowering opacity */
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            padding-bottom: 190px;
+            /*this was the reason why footer was not coming at the bottom */
+        }
+
+        .secondSection h1 {
+            font-size: 1.8rem;
+        }
+
+        .secondSection .box {
+            background-color: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 6vw;
+        }
+
+        .image-top {
+            width: 25px;
+            position: relative;
+            top: -32px;
+            left: -12px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 60px;
+            width: 150px;
+            left: -32px;
+            font-size: 18px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 60px;
+            color: gray;
+            width: 150px;
+            left: -28px;
+            font-size: 9px;
+        }
+
+        footer {
+            background-color: #0e0e1a;
+            /* height: 200px; */
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 10px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+            /*this will not show up any dots before the home */
+        }
+
+        .footer>div {
+            width: 200px;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        /* here is the responsive part  */
+        @media screen and (max-width: 1200px) {
+
+
+            .box {
+                flex-direction: column;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            nav {
+                flex-direction: column;
+                ;
+            }
+
+            .secondSection .box {
+                width: 50vw;
+            }
+             
+
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .secondSection{
+                height:110vh;
+                /* used to place footer at bottom when making responsive  */
+                /* note : if adding anything into timeline then make sure to increase the value from 60 accordingly */
+            }
+
+            .rightSection {
+                width: 721px !important;
+                display: flex;
+                justify-content: center;
+            }
+            .rightSection img{
+                width: 45vw;
+                margin-bottom:73px ;
+            }
+
+            .image-top{
+                top: 100px;
+
+            }
+
+            .secondSection {
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            body{
+                min-width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Ashish's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <div> Hi, My Name is <span class="purple">Ashish</span></div>
+
+                <div> and I am a passionate</div>
+                <!-- <div>Web Developer</div> -->
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit My Github</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr />
+        <section class="secondSection">
+            <span class="text-gray">What I have done So far</span>
+            <h1>Work Experience</h1>
+
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="developer.png" alt="">
+                    <div class="vertical-title">Vibe Coder(2022-23)</div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis labore adipisci sapiente
+                        nobis eligendi qui dignissimos libero alias, eos harum omnis ipsum sequi?
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="c.png" alt="">
+                    <div class="vertical-title">C/C++(2023-24)</div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis labore adipisci sapiente
+                        nobis eligendi qui dignissimos libero alias, eos harum omnis ipsum sequi?
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="python.png" alt="">
+                    <div class="vertical-title">Python(2024-25)</div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis labore adipisci sapiente
+                        nobis eligendi qui dignissimos libero alias, eos harum omnis ipsum sequi?
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="instagram.png" alt="">
+                    <div class="vertical-title">Intern (2025-Present) </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis labore adipisci sapiente
+                        nobis eligendi qui dignissimos libero alias, eos harum omnis ipsum sequi?
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Ashish's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact Us</li>
+                    <!-- <li>Services</li> -->
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Know Us</li>
+                    <li>Events</li>
+                    <li>Discounts</li>
+                    <!-- <li>Services</li> -->
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <ul>
+                    <li>Offers</li>
+                    <li></li>
+                    <li>Services</li>
+                    <!-- <li>Contact</li> -->
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-rights">
+            Copyright &#169; ashishportfolio.com | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Data Science', 'Video Editor'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
